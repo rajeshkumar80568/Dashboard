@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--darkgray);   
+}
+
+:root{
+    --darkgray : rgba(0,0,0,0.7);
+    --lightgray : rgba(0,0,0,0.5);
+    --bg : rgba(0,0,0,0.05);
+    --white : rgba(255,255,255,0.9);
+}
+
+hr{
+    border:none;
+    border-bottom: 2px solid var(--lightgray);
+}
+
+h1{
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.listContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--bg);
+  border: 1px solid gray;
+} 
+
+.listContainer .container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.listContainer .container .card {
+  position: relative;
+  max-width: 600px;
+  flex-grow: 1;
+  min-width: 400px;
+  height: 340px;
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.listContainer .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  flex-grow: 1;
+  background: var(--white);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.listContainer .container .card .box .content {
+  position: relative;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fir a{
+    position: absolute;
+    right:-90px;
+    top: -20px;
+    font-size: 10px;
+    border: 1px solid lightskyblue;
+    height: 20px;
+    width: 20px;
+    padding-top: 3px;
+    color: white;
+    font-weight: bold;
+    background: lightskyblue;
+    border-radius: 50%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: -30px;
+    top: 20px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    z-index: 999;
+}
+
+.chart-container {
+    width: 80%;
+    height: 180px;
+    margin: 0 auto;
+  }
+  
+  .pie-chart-container,
+  .doughnut-chart-container {
+    height: 360px;
+    width: 360px;
+    float: left;
+  }
+
+  .arrow-up {
+    width: 0; 
+    height: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid green;
+  }
+  .arrow-up:nth-child(1){
+    bottom:30px;
+  }
+  .arrow-up:nth-child(2){
+    bottom:10px;
+}
